@@ -9,13 +9,14 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody2D rb; // Componente de física
     public bool isMove = true; // Flag que controla se o player pode se mover
     public GameObject Player; // Objeto visual do jogador
+    private SpriteRenderer sp; // Componente de renderização do sprite
 
     [Header("Other Settings")]
     private PlayerTrigger playerTrigger; // Controle de gatilhos
     private MinCheckListSystem _minCheckListSystem; // Checklist mínima
     private MaxCheckListSytem _maxCheckListSytem; // Checklist máxima
-    private GameObject minCheckList; // UI da checklist mínima
-    private GameObject maxCheckList; // UI da checklist máxima
+    public GameObject minCheckList; // UI da checklist mínima
+    public GameObject maxCheckList; // UI da checklist máxima
     public bool minMax; // Controle de qual checklist está ativa
     private ItemPickUp _itemPickUp; // Sistema de coleta (não usado no script)
     private GameObject cabinets; // Armários (não usado diretamente aqui)
@@ -26,13 +27,15 @@ public class PlayerManager : MonoBehaviour
     private Vector3 originalScale; // Escala original do jogador
     private GameObject screenSettingsZerado; // Tela de finalização
 
+    
+
     public string characterPrefix = "Boy"; // Prefixo para animações (Boy ou Girl)
-    public PlayerAnimationController playerAnimationController; // Controlador de animações
 
     private Animator animator; // Componente de animação
 
     private void Start()
     {
+        sp = GetComponent<SpriteRenderer>(); // Inicializa SpriteRenderer
         rb = GetComponent<Rigidbody2D>(); // Inicializa Rigidbody
         isMove = true; // Ativa movimentação
         valueBook = 0; // Zera valor dos livros
@@ -42,13 +45,15 @@ public class PlayerManager : MonoBehaviour
         _minCheckListSystem = new MinCheckListSystem(minCheckList); // Inicializa checklist mínima
         _maxCheckListSytem = new MaxCheckListSytem(maxCheckList); // Inicializa checklist máxima
 
+        minCheckList = GameObject.Find("checkListMin"); // Busca objeto da checklist mínima
+        maxCheckList = GameObject.Find("checkListMax"); // Busca objeto da checklist máxima
+
         originalScale = transform.localScale; // Armazena escala inicial
 
         characterPrefix = PlayerUtils.GetCharacterPrefix(); // Define prefixo da skin selecionada
         Debug.Log(characterPrefix);
 
         animator = GetComponent<Animator>(); // Pega o Animator
-        playerAnimationController.Init(animator, characterPrefix); // Inicializa o controlador de animação
     }
 
     public void ShowCabinets(bool active)
@@ -109,17 +114,6 @@ public class PlayerManager : MonoBehaviour
 
             Vector2 targetDirection = new Vector2(VirtualJoystick.GetAxis("Horizontal"), VirtualJoystick.GetAxis("Vertical")); // Lê direção do joystick
 
-            if (targetDirection != Vector2.zero)
-            {
-                if (targetDirection.x > 0) Player.GetComponent<SpriteRenderer>().flipX = false; // Vira sprite para direita
-                if (targetDirection.x < 0) Player.GetComponent<SpriteRenderer>().flipX = true; // Vira sprite para esquerda
-
-                playerAnimationController.SetMovement(targetDirection.x, targetDirection.y); // Atualiza animação
-            }
-            else
-            {
-                playerAnimationController.SetMovement(0, 0); // Animação de idle
-            }
 
             if (targetDirection.sqrMagnitude != 0)
             {
@@ -135,7 +129,6 @@ public class PlayerManager : MonoBehaviour
         {
             rb.linearVelocity = Vector2.zero; // Para movimento
             moveSpeed = 0f; // Zera velocidade
-            playerAnimationController.SetMovement(0, 0); // Força idle
         }
     }
 
@@ -171,12 +164,12 @@ public class PlayerManager : MonoBehaviour
             if (velocity.x > 0f)
             {
                 // Indo para a direita (sem flip)
-                transform.localScale = new Vector3(1, 1, 1);
+                sp.flipX = false;
             }
             else
             {
                 // Indo para a esquerda (com flip)
-                transform.localScale = new Vector3(-1, 1, 1);
+                sp.flipX = true;
             }
         }
         else
