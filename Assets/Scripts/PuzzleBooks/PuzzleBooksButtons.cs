@@ -20,12 +20,13 @@ public class PuzzleBooksButtons : MonoBehaviour
     public void BtC()
     {
         answer = "C";
-
+        backgroundCabinets.SetActive(false); 
         if (answer == correct)
         {
+            
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             ItemPickUp.CanAnswerPuzzle = false;
 
             if (i == 3)
@@ -38,7 +39,8 @@ public class PuzzleBooksButtons : MonoBehaviour
         else
         {
             ItemPickUp.CanAnswerPuzzle = false;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
+
             switch (correct)
             {
                 case "C_Libras":
@@ -64,12 +66,13 @@ public class PuzzleBooksButtons : MonoBehaviour
     public void BtC_libras()
     {
         answer = "C_Libras";
+        backgroundCabinets.SetActive(false);
 
         if (answer == correct)
         {
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             ItemPickUp.CanAnswerPuzzle = false;
 
             booksCorrects[0] = true;
@@ -83,7 +86,7 @@ public class PuzzleBooksButtons : MonoBehaviour
         else
         {
             ItemPickUp.CanAnswerPuzzle = false;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
 
             switch (correct)
             {
@@ -109,11 +112,13 @@ public class PuzzleBooksButtons : MonoBehaviour
     public void BtF_libras()
     {
         answer = "F_Libras";
+        backgroundCabinets.SetActive(false);
+
         if (answer == correct)
         {
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             ItemPickUp.CanAnswerPuzzle = false;
 
             booksCorrects[3] = true;
@@ -127,7 +132,7 @@ public class PuzzleBooksButtons : MonoBehaviour
         else
         {
             ItemPickUp.CanAnswerPuzzle = false;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             switch (correct)
             {
                 case "C_Libras":
@@ -153,11 +158,12 @@ public class PuzzleBooksButtons : MonoBehaviour
     {
         answer = "G";
         backgroundCabinets.SetActive(false);
+
         if (answer == correct)
         {
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             ItemPickUp.CanAnswerPuzzle = false;
 
             booksCorrects[2] = true;
@@ -171,7 +177,7 @@ public class PuzzleBooksButtons : MonoBehaviour
         else
         {
             ItemPickUp.CanAnswerPuzzle = false;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             switch (correct)
             {
                 case "C_Libras":
@@ -201,7 +207,7 @@ public class PuzzleBooksButtons : MonoBehaviour
         {
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             ItemPickUp.CanAnswerPuzzle = false;
 
             if (i == 3)
@@ -213,7 +219,7 @@ public class PuzzleBooksButtons : MonoBehaviour
         else
         {
             ItemPickUp.CanAnswerPuzzle = false;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             switch (correct)
             {
                 case "C_Libras":
@@ -243,7 +249,8 @@ public class PuzzleBooksButtons : MonoBehaviour
         {
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
-            backgroundCabinets.SetActive(false);
+            
+            PlayerManager.cabinetsActive = false;
             ItemPickUp.CanAnswerPuzzle = false;
 
             if (i == 3)
@@ -285,7 +292,7 @@ public class PuzzleBooksButtons : MonoBehaviour
         {
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             ItemPickUp.CanAnswerPuzzle = false;
 
             if (i == 3)
@@ -297,7 +304,7 @@ public class PuzzleBooksButtons : MonoBehaviour
         else
         {
             ItemPickUp.CanAnswerPuzzle = false;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             switch (correct)
             {
                 case "C_Libras":
@@ -327,7 +334,7 @@ public class PuzzleBooksButtons : MonoBehaviour
         {
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             ItemPickUp.CanAnswerPuzzle = false;
 
             booksCorrects[1] = true;
@@ -341,7 +348,7 @@ public class PuzzleBooksButtons : MonoBehaviour
         else
         {
             ItemPickUp.CanAnswerPuzzle = false;
-            backgroundCabinets.SetActive(false);
+            PlayerManager.cabinetsActive = false;
             switch (correct)
             {
                 case "C_Libras":

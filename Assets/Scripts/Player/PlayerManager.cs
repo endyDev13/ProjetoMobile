@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
     [Header("Player Settings")]
     public float moveSpeed = 4f; // Velocidade do jogador
     private Rigidbody2D rb; // Componente de física
-    public bool isMove = true; // Flag que controla se o player pode se mover
+    public static bool isMove = true; // Flag que controla se o player pode se mover
     public GameObject Player; // Objeto visual do jogador
     private SpriteRenderer sp; // Componente de renderização do sprite
 
@@ -19,15 +19,15 @@ public class PlayerManager : MonoBehaviour
     public GameObject maxCheckList; // UI da checklist máxima
     public bool minMax; // Controle de qual checklist está ativa
     private ItemPickUp _itemPickUp; // Sistema de coleta (não usado no script)
-    private GameObject cabinets; // Armários (não usado diretamente aqui)
-    public GameObject[] books; // Array de livros que serão ativados
+    private GameObject cabinets; // Referência obtida da UIReferences
     static public int valueBook; // Valor compartilhado dos livros
     public GameObject paper; // Objeto que ativa checklist
     public int countSpawnBook = 0; // Controle para spawn único dos livros
     private Vector3 originalScale; // Escala original do jogador
     private GameObject screenSettingsZerado; // Tela de finalização
+    public static bool cabinetsActive = false; // Controle de visibilidade dos armários
 
-    
+
 
     public string characterPrefix = "Boy"; // Prefixo para animações (Boy ou Girl)
 
@@ -35,6 +35,8 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        countSpawnBook = 0;
+
         sp = GetComponent<SpriteRenderer>(); // Inicializa SpriteRenderer
         rb = GetComponent<Rigidbody2D>(); // Inicializa Rigidbody
         isMove = true; // Ativa movimentação
@@ -42,11 +44,12 @@ public class PlayerManager : MonoBehaviour
         minMax = false; // Checklist começa inativa
         playerTrigger = new PlayerTrigger(this); // Inicializa sistema de gatilhos
 
+
+        minCheckList = UIReferences.Instance.checkListMin; // Pega checklist mínima
+        maxCheckList = UIReferences.Instance.checkListMax; // Pega checklist máxima
+
         _minCheckListSystem = new MinCheckListSystem(minCheckList); // Inicializa checklist mínima
         _maxCheckListSytem = new MaxCheckListSytem(maxCheckList); // Inicializa checklist máxima
-
-        minCheckList = GameObject.Find("checkListMin"); // Busca objeto da checklist mínima
-        maxCheckList = GameObject.Find("checkListMax"); // Busca objeto da checklist máxima
 
         originalScale = transform.localScale; // Armazena escala inicial
 
@@ -54,36 +57,47 @@ public class PlayerManager : MonoBehaviour
         Debug.Log(characterPrefix);
 
         animator = GetComponent<Animator>(); // Pega o Animator
+
+        cabinets = UIReferences.Instance.cabinets;
+
     }
 
-    public void ShowCabinets(bool active)
+    public void ShowCabinets()
     {
-        cabinets.SetActive(active);
+        cabinets.SetActive(true);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        playerTrigger.TriggerEnter2D(other); // Encaminha evento ao sistema de gatilho
+        playerTrigger.TriggerEnter2D(other);
 
-        if (other.CompareTag("paper")) // Ao colidir com o papel
+        if (other.CompareTag("paper"))
         {
             if (countSpawnBook == 0)
             {
+                isMove = false;
+                SpawnBook();
+                countSpawnBook++;
+
                 Debug.Log("paper trigger");
 
-                maxCheckList.SetActive(true); // Ativa checklist máxima
-                isMove = false; // Para movimento
-                SpawnBook(); // Mostra livros
-                countSpawnBook++; // Garante que só aconteça uma vez
+                if (maxCheckList != null)
+                    maxCheckList.SetActive(true);
             }
         }
 
-        if (other.CompareTag("end")) // Ao colidir com a saída
+        if (other.CompareTag("end"))
         {
-            screenSettingsZerado.SetActive(true); // Mostra tela final
-            isMove = false; // Para movimento
+            if (screenSettingsZerado != null)
+                screenSettingsZerado.SetActive(true);
+            else
+                Debug.LogError("screenSettingsZerado está nulo!");
+
+            isMove = false;
         }
     }
+
 
     private void FixedUpdate()
     {
@@ -93,8 +107,13 @@ public class PlayerManager : MonoBehaviour
 
     public void SpawnBook()
     {
-        for (int i = 0; i < books.Length; i++) books[i].SetActive(true); // Ativa todos os livros
+        UIReferences.Instance.bookRed.SetActive(true); // Ativa livro vermelho
+        UIReferences.Instance.bookGreen.SetActive(true); // Ativa livro verde
+        UIReferences.Instance.bookBlue.SetActive(true); // Ativa livro azul
+        UIReferences.Instance.bookYellow.SetActive(true); // Ativa livro amarelo
+
     }
+
 
     public void PlayerStop()
     {
@@ -108,25 +127,35 @@ public class PlayerManager : MonoBehaviour
 
     public void Move()
     {
+        if (!cabinetsActive) isMove = true; // Ativa movimento se armários não estão ativos
+
+        if (cabinetsActive) isMove = false; // Para movimento se armários estão ativos
+
         if (isMove)
         {
-            moveSpeed = 3f; // Define velocidade padrão
-
-            Vector2 targetDirection = new Vector2(VirtualJoystick.GetAxis("Horizontal"), VirtualJoystick.GetAxis("Vertical")); // Lê direção do joystick
-
-
-            if (targetDirection.sqrMagnitude != 0)
+          
             {
-                targetDirection.Normalize(); // Normaliza direção
-                rb.linearVelocity = targetDirection * moveSpeed; // Aplica movimento
-            }
-            else
-            {
-                rb.linearVelocity = Vector2.zero; // Para se não estiver se movendo
+                isMove = true; // Ativa movimento
+
+                moveSpeed = 3f; // Define velocidade padrão
+
+                Vector2 targetDirection = new Vector2(VirtualJoystick.GetAxis("Horizontal"), VirtualJoystick.GetAxis("Vertical")); // Lê direção do joystick
+
+
+                if (targetDirection.sqrMagnitude != 0)
+                {
+                    targetDirection.Normalize(); // Normaliza direção
+                    rb.linearVelocity = targetDirection * moveSpeed; // Aplica movimento
+                }
+                else
+                {
+                    rb.linearVelocity = Vector2.zero; // Para se não estiver se movendo
+                }
             }
         }
-        else
+        else if (!isMove)
         {
+            
             rb.linearVelocity = Vector2.zero; // Para movimento
             moveSpeed = 0f; // Zera velocidade
         }

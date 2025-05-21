@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 433639728389997186}
   - component: {fileID: 8158601160221506511}
   - component: {fileID: 5870908812741204490}
-  - component: {fileID: 919584374293532297}
   m_Layer: 0
   m_Name: PlayerBoy
   m_TagString: Player
@@ -180,6 +179,8 @@ MonoBehaviour:
   moveSpeed: 3
   isMove: 1
   Player: {fileID: 5819219744366218571}
+  minCheckList: {fileID: 0}
+  maxCheckList: {fileID: 0}
   minMax: 0
   books:
   - {fileID: 0}
@@ -189,7 +190,6 @@ MonoBehaviour:
   paper: {fileID: 0}
   countSpawnBook: 0
   characterPrefix: Boy
-  playerAnimationController: {fileID: 919584374293532297}
 --- !u!95 &5870908812741204490
 Animator:
   serializedVersion: 7
@@ -212,15 +212,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &919584374293532297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5819219744366218571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0874250a2cf3564da5869a3e2401cf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

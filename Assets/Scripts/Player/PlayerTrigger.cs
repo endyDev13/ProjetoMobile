@@ -21,9 +21,9 @@ public class PlayerTrigger
             {
                 if (ItemPickUp.CanAnswerPuzzle == true)
                 {
-                    playerManager.ShowCabinets(true);
-                    playerManager.PlayerStop();
-                    
+                    playerManager.ShowCabinets();
+                    PlayerManager.cabinetsActive = true;
+
                 }
             }
         }
