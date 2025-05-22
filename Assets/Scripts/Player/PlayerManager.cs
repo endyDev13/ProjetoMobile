@@ -28,13 +28,14 @@ public class PlayerManager : MonoBehaviour
     public static bool cabinetsActive = false; // Controle de visibilidade dos armários
 
 
-
     public string characterPrefix = "Boy"; // Prefixo para animações (Boy ou Girl)
 
     private Animator animator; // Componente de animação
 
     private void Start()
     {
+        UIReferences.Instance.SetPlayerManager(this);
+
         countSpawnBook = 0;
 
         sp = GetComponent<SpriteRenderer>(); // Inicializa SpriteRenderer
@@ -47,6 +48,9 @@ public class PlayerManager : MonoBehaviour
 
         minCheckList = UIReferences.Instance.checkListMin; // Pega checklist mínima
         maxCheckList = UIReferences.Instance.checkListMax; // Pega checklist máxima
+        cabinets = UIReferences.Instance.cabinets; // Pega armários
+
+        screenSettingsZerado = UIReferences.Instance.screenSettingsZerado; // Pega tela de finalização
 
         _minCheckListSystem = new MinCheckListSystem(minCheckList); // Inicializa checklist mínima
         _maxCheckListSytem = new MaxCheckListSytem(maxCheckList); // Inicializa checklist máxima
@@ -58,13 +62,21 @@ public class PlayerManager : MonoBehaviour
 
         animator = GetComponent<Animator>(); // Pega o Animator
 
-        cabinets = UIReferences.Instance.cabinets;
 
     }
 
     public void ShowCabinets()
     {
         cabinets.SetActive(true);
+        PlayerStop();  // Para movimento quando livros aparecem
+        Debug.Log("Cabinets ativados");
+    }
+
+    public void HideCabinets()
+    {
+        cabinets.SetActive(false);
+        PlayerUnStop();  // Retoma movimento quando livros somem
+        Debug.Log("Cabinets desativados");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -75,16 +87,20 @@ public class PlayerManager : MonoBehaviour
         {
             if (countSpawnBook == 0)
             {
-                isMove = false;
+                UIReferences.Instance.pickPaper = true;
                 SpawnBook();
                 countSpawnBook++;
 
                 Debug.Log("paper trigger");
 
                 if (maxCheckList != null)
+                {
                     maxCheckList.SetActive(true);
+                    PlayerStop(); // Impede movimento ao abrir checklist
+                }
             }
         }
+
 
         if (other.CompareTag("end"))
         {
@@ -117,25 +133,19 @@ public class PlayerManager : MonoBehaviour
     public void PlayerStop()
     {
         isMove = false; // Para o movimento externamente
+        animator.Play("idle"); // Para animação
     }
 
     public void PlayerUnStop()
     {
         isMove = true; // Reativa o movimento
+        
     }
 
     public void Move()
     {
-        if (!cabinetsActive) isMove = true; // Ativa movimento se armários não estão ativos
-
-        if (cabinetsActive) isMove = false; // Para movimento se armários estão ativos
-
         if (isMove)
         {
-          
-            {
-                isMove = true; // Ativa movimento
-
                 moveSpeed = 3f; // Define velocidade padrão
 
                 Vector2 targetDirection = new Vector2(VirtualJoystick.GetAxis("Horizontal"), VirtualJoystick.GetAxis("Vertical")); // Lê direção do joystick
@@ -150,7 +160,6 @@ public class PlayerManager : MonoBehaviour
                 {
                     rb.linearVelocity = Vector2.zero; // Para se não estiver se movendo
                 }
-            }
         }
         else if (!isMove)
         {
@@ -160,14 +169,18 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void Show()
+    public void ToggleChecklist()
     {
-        minMax = !minMax; // Alterna entre os modos
+        minMax = !minMax;
+        UIReferences.Instance.minMax = minMax;
 
-        minCheckList.SetActive(minMax); // Ativa checklist mínima se minMax = true
-        maxCheckList.SetActive(!minMax); // Ativa checklist máxima se minMax = false
+        minCheckList.SetActive(minMax);
+        maxCheckList.SetActive(!minMax);
 
-        isMove = minMax; // Ativa movimento apenas se for checklist mínima
+        if (minMax)
+            PlayerUnStop(); // Checklist mínima ativa = pode andar
+        else
+            PlayerStop();   // Checklist máxima ativa = para o movimento
     }
 
     public void Animation()
@@ -180,7 +193,6 @@ public class PlayerManager : MonoBehaviour
         if (speed == 0f)
         {
             animator.Play("idle");
-            return;
         }
 
         // Detecção de direção dominante
@@ -207,7 +219,7 @@ public class PlayerManager : MonoBehaviour
             {
                 animator.Play("walkUp");
             }
-            else
+            if(velocity.y < 0f)
             {
                 animator.Play("walkDown");
             }

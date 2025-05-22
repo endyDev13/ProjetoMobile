@@ -1,4 +1,3 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class UIReferences : MonoBehaviour
@@ -7,14 +6,17 @@ public class UIReferences : MonoBehaviour
 
     public GameObject checkListMin;
     public GameObject checkListMax;
-    public bool minMax; // Controle de qual checklist está ativa
-
+    public bool minMax;
+    public bool pickPaper;
     public GameObject bookRed;
     public GameObject bookGreen;
     public GameObject bookBlue;
     public GameObject bookYellow;
 
     public GameObject cabinets;
+    public GameObject screenSettingsZerado;
+
+    private PlayerManager playerManager; //  Fica null até ser setado
 
     void Awake()
     {
@@ -24,13 +26,19 @@ public class UIReferences : MonoBehaviour
             Destroy(gameObject);
     }
 
+    // Novo método para registrar o player
+    public void SetPlayerManager(PlayerManager manager)
+    {
+        playerManager = manager;
+    }
+
+    // Só será chamado se playerManager tiver sido setado
     public void Show()
     {
-        minMax = !minMax; // Alterna entre os modos
-
-        checkListMin.SetActive(minMax); // Ativa checklist mínima se minMax = true
-        checkListMax.SetActive(!minMax); // Ativa checklist máxima se minMax = false
-
-        PlayerManager.isMove = minMax; // Ativa movimento apenas se for checklist mínima
+        if (playerManager != null)
+            playerManager.ToggleChecklist();
+        else
+            Debug.LogError("PlayerManager não foi setado no UIReferences!");
     }
+
 }

@@ -235,7 +235,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Female Character Animation 1_0
+      name: idle1
       rect:
         serializedVersion: 2
         x: 464
@@ -257,29 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female Character Animation 1_2
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 277
-        width: 9
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e4d107b7cbc4e6d40800000000000000
-      internalID: 5579481360767130958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Female Character Animation 1_1
+      name: idle2
       rect:
         serializedVersion: 2
         x: 530
@@ -301,7 +279,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female Character Animation 1_3
+      name: idle3
       rect:
         serializedVersion: 2
         x: 594
@@ -323,7 +301,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female Character Animation 1_4
+      name: idle5
       rect:
         serializedVersion: 2
         x: 710
@@ -345,7 +323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female Character Animation 1_5
+      name: idle4
       rect:
         serializedVersion: 2
         x: 647
@@ -366,6 +344,336 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: down1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 290
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dd8a954c5db944cbe89b7d40ee26cc
+      internalID: 1376339793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 290
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4c975bb18b83f4c8e7798daf5d1c3c
+      internalID: -1124571032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down3
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 290
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a3dffed30ba8046998e350b8175562
+      internalID: 5579481360767130958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 290
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09db8488cdd9f64d9ddfa19797a9970
+      internalID: 2089185575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 290
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ab5f3761c38234ea8ee5553dcbdbe7
+      internalID: -1812168624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: up1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 193
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee337a1a93f3bc41991213d90fa4c36
+      internalID: -545078369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: up5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 193
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ca3b27c0a8f56489060b3f583f1019
+      internalID: -8074436063812408572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: up4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 193
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2692b113b643748b711bb4e451a4d6
+      internalID: -1805261376857406596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: up3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 193
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead8b076e662d5a4e8e968be19d8894d
+      internalID: -2351424222425269541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: up2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 193
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbe9d4f15d67c84090a5fcaad34e4f3
+      internalID: 3693242110252111399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 103
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2c5175174d3ab4c997c620b6fc19ab
+      internalID: -8203785357077780834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 103
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172ccfed23377b5429f00a898b00f1e6
+      internalID: 842417515138558627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 103
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548ab2a5be9e6014d80e19f354fc7095
+      internalID: 2139396271998754628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 103
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286fa22f395136d4caadef1f9c643619
+      internalID: -8308854336392464295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 103
+        width: 50
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e540d93633ff249aed3f07548d33f8
+      internalID: 1265157432455583083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -380,19 +688,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Female Character Animation 1_0: 1580809347272806763
-      Female Character Animation 1_1: 2982716142729203850
-      Female Character Animation 1_10: -8203785357077780834
-      Female Character Animation 1_11: 842417515138558627
-      Female Character Animation 1_12: 2139396271998754628
-      Female Character Animation 1_13: -8308854336392464295
-      Female Character Animation 1_14: 1265157432455583083
-      Female Character Animation 1_15: -3188298078629295883
-      Female Character Animation 1_16: -7427388751693218021
-      Female Character Animation 1_17: -7926104595174588847
-      Female Character Animation 1_18: -15530998949590164
-      Female Character Animation 1_19: 8767359436836129877
-      Female Character Animation 1_2: 5579481360767130958
       Female Character Animation 1_20: -7418173668782411170
       Female Character Animation 1_21: 6300345127319971076
       Female Character Animation 1_22: -1189403927147934279
@@ -403,16 +698,34 @@ TextureImporter:
       Female Character Animation 1_27: -7111717753393077947
       Female Character Animation 1_28: 6720708122775981041
       Female Character Animation 1_29: -4412024205198802370
-      Female Character Animation 1_3: 3786720379137286578
       Female Character Animation 1_30: -5556401107314629592
       Female Character Animation 1_31: 971865451066876170
       Female Character Animation 1_32: -5227896682880209339
-      Female Character Animation 1_4: 7800416581895654647
-      Female Character Animation 1_5: -6434104392613050939
-      Female Character Animation 1_6: -8074436063812408572
-      Female Character Animation 1_7: -1805261376857406596
-      Female Character Animation 1_8: -2351424222425269541
-      Female Character Animation 1_9: 3693242110252111399
+      down1: 1376339793
+      down2: -1124571032
+      down3: 5579481360767130958
+      down4: -1812168624
+      down5: 2089185575
+      idle1: 1580809347272806763
+      idle2: 2982716142729203850
+      idle3: 3786720379137286578
+      idle4: -6434104392613050939
+      idle5: 7800416581895654647
+      left1: -3188298078629295883
+      left2: -7427388751693218021
+      left3: -7926104595174588847
+      left4: -15530998949590164
+      left5: 8767359436836129877
+      right1: -8203785357077780834
+      right2: 842417515138558627
+      right3: 2139396271998754628
+      right4: -8308854336392464295
+      right5: 1265157432455583083
+      up1: -545078369
+      up2: 3693242110252111399
+      up3: -2351424222425269541
+      up4: -1805261376857406596
+      up5: -8074436063812408572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

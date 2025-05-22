@@ -27,6 +27,17 @@ public class PlayerSpawn : MonoBehaviour
             GameObject playerInstance = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
             hasSpawned = true;
 
+            // Atribui PlayerManager ao PuzzleBooksButtons
+            PlayerManager pm = playerInstance.GetComponent<PlayerManager>();
+            PuzzleBooksButtons puzzleBooks = FindAnyObjectByType<PuzzleBooksButtons>();
+            if (puzzleBooks != null && pm != null)
+            {
+                puzzleBooks.SetPlayerManager(pm);
+            }
+            else
+            {
+                Debug.LogError("Não foi possível conectar o PlayerManager ao PuzzleBooksButtons.");
+            }
             // Faz a Cinemachine seguir o jogador instanciado
             if (virtualCamera != null)
             {

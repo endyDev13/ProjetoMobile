@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PuzzleBooksButtons : MonoBehaviour
 {
@@ -13,17 +15,36 @@ public class PuzzleBooksButtons : MonoBehaviour
     public GameObject colDoor;
     public bool[] booksCorrects;
 
+
+    public GameObject [] obj_Letras;
+    public GameObject[] obj_LibrasLetra;
+    public GameObject[] certos;
+
+    private PlayerManager playerManager;
+
+    public void SetPlayerManager(PlayerManager pm)
+    {
+        playerManager = pm;
+    }
+
     private void Start()
     {
+        if (playerManager == null)
+        {
+            playerManager = FindAnyObjectByType<PlayerManager>();
+            if (playerManager == null)
+                Debug.LogError("PlayerManager não foi encontrado!");
+        }
         i = -1;
     }
     public void BtC()
     {
         answer = "C";
         backgroundCabinets.SetActive(false); 
+        playerManager.HideCabinets();
+
         if (answer == correct)
         {
-            
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
             PlayerManager.cabinetsActive = false;
@@ -61,15 +82,21 @@ public class PuzzleBooksButtons : MonoBehaviour
                     break;
             }
         }
-
     }
     public void BtC_libras()
     {
+        Debug.Log("CCCCCCCCCC");
         answer = "C_Libras";
         backgroundCabinets.SetActive(false);
+        playerManager.HideCabinets();
 
         if (answer == correct)
         {
+            obj_Letras[0].SetActive(false);
+            obj_LibrasLetra[2].SetActive(false);
+            certos[1].SetActive(true);
+            certos[4].SetActive(true);
+
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
             PlayerManager.cabinetsActive = false;
@@ -113,9 +140,14 @@ public class PuzzleBooksButtons : MonoBehaviour
     {
         answer = "F_Libras";
         backgroundCabinets.SetActive(false);
+        playerManager.HideCabinets();
 
         if (answer == correct)
         {
+            obj_LibrasLetra[0].SetActive(false);
+            obj_LibrasLetra[1].SetActive(false);
+            certos[0].SetActive(true);
+            certos[2].SetActive(true);
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
             PlayerManager.cabinetsActive = false;
@@ -158,9 +190,14 @@ public class PuzzleBooksButtons : MonoBehaviour
     {
         answer = "G";
         backgroundCabinets.SetActive(false);
+        playerManager.HideCabinets();
 
         if (answer == correct)
         {
+            obj_Letras[1].SetActive(false);
+            obj_LibrasLetra[3].SetActive(false);
+            certos[3].SetActive(true);
+            certos[5].SetActive(true);
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
             PlayerManager.cabinetsActive = false;
@@ -203,6 +240,7 @@ public class PuzzleBooksButtons : MonoBehaviour
     {
         answer = "G_Libras";
         backgroundCabinets.SetActive(false);
+        playerManager.HideCabinets();
         if (answer == correct)
         {
             i++;
@@ -245,6 +283,7 @@ public class PuzzleBooksButtons : MonoBehaviour
     {
         answer = "T_Libras";
         backgroundCabinets.SetActive(false);
+        playerManager.HideCabinets();
         if (answer == correct)
         {
             i++;
@@ -288,6 +327,7 @@ public class PuzzleBooksButtons : MonoBehaviour
     {
         answer = "V";
         backgroundCabinets.SetActive(false);
+        playerManager.HideCabinets();
         if (answer == correct)
         {
             i++;
@@ -330,8 +370,14 @@ public class PuzzleBooksButtons : MonoBehaviour
     {
         answer = "Y";
         backgroundCabinets.SetActive(false);
+        playerManager.HideCabinets();
         if (answer == correct)
         {
+            obj_Letras[2].SetActive(false);
+            obj_Letras[3].SetActive(false);
+            certos[6].SetActive(true);
+            certos[7].SetActive(true);
+
             i++;
             bts[i].GetComponent<SpriteRenderer>().sprite = btOn;
             PlayerManager.cabinetsActive = false;
