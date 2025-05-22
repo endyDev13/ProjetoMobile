@@ -337,7 +337,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SalvarEAvancar_0: -9025314874424224186
+      SalvarEAvancar_1: 2946153652087004694
+      SalvarEAvancar_2: 8052387172390536987
+      SalvarEAvancar_3: 7358643479261803536
+      SalvarEAvancar_4: 441573682759046818
+      SalvarEAvancar_5: -5553445890761111201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

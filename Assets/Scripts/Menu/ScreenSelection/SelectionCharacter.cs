@@ -18,7 +18,7 @@ public class ScreenCharacter : MonoBehaviour
     private bool[] isTrembling;
     private float[] noiseOffsets;
 
-    public TMP_InputField inputField;      // Referência ao InputField
+    public static TMP_InputField inputField;      // Referência ao InputField
     public bool isTextLongEnough = false; // Bool que indica se o texto tem mais que 3 letras
 
     public Color selectedColor; // Cor do texto quando selecionado
@@ -26,6 +26,7 @@ public class ScreenCharacter : MonoBehaviour
 
     void Start()
     {
+        inputField = GameObject.FindAnyObjectByType<TMP_InputField>();
         inputField.onValueChanged.AddListener(CheckTextLength);
         originalColor = characters[0].GetComponent<Image>().color; // Armazena a cor original do texto
 
@@ -106,8 +107,8 @@ public class ScreenCharacter : MonoBehaviour
 
     void CheckTextLength(string text)
     {
-        // Verifica se o texto tem mais de 3 letras
-        if (text.Length > 3)
+        // Verifica se o texto tem mais de 2 letras
+        if (text.Length > 2)
         {
             isTextLongEnough = true;
             isName = true;
@@ -119,6 +120,6 @@ public class ScreenCharacter : MonoBehaviour
         }
 
         // Log para mostrar o status
-        Debug.Log("Texto maior que 3 letras: " + isTextLongEnough);
+        Debug.Log("Texto maior que 2 letras: " + isTextLongEnough);
     }
 }

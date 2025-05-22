@@ -65,7 +65,6 @@ public class PlayerManager : MonoBehaviour
     public void ShowCabinets()
     {
         cabinets.SetActive(true);
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)

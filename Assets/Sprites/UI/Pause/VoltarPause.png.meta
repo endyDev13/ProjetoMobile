@@ -362,7 +362,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VoltarPause_0: -4396575355296654178
+      VoltarPause_1: 382393592372051823
+      VoltarPause_2: -36331935675364278
+      VoltarPause_3: 113883761297310299
+      VoltarPause_4: -8939585851407980052
+      VoltarPause_5: -8350970375307306655
+      VoltarPause_6: 8539565294480855199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

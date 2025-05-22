@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FotoMenino_0: 2575786527739050434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

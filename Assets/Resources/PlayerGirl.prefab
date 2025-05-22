@@ -177,19 +177,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  isMove: 1
   Player: {fileID: 5507276286994627032}
   minCheckList: {fileID: 0}
   maxCheckList: {fileID: 0}
   minMax: 0
-  books:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   paper: {fileID: 0}
   countSpawnBook: 0
-  characterPrefix: Boy
+  characterPrefix: Girl
 --- !u!95 &6584685865161620223
 Animator:
   serializedVersion: 7
