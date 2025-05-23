@@ -44,6 +44,7 @@ public class EnemyAI : MonoBehaviour
 
         patrolPoints = patrolRoute.GetPatrolPointsForLevel(IAGameManager.IA_Lvl);
 
+
         if (patrolPoints == null || patrolPoints.Count == 0)
         {
             Debug.LogError("EnemyAI: Nenhum ponto de patrulha para IA_Lvl: " + IAGameManager.IA_Lvl);
@@ -56,11 +57,28 @@ public class EnemyAI : MonoBehaviour
     }
 
 
+    private int lastKnownLevel = -1; // Adicione esta linha fora de qualquer método
+
     private void Update()
     {
         stateMachine.Update();
         MoveAlongPath();
+
+        if (lastKnownLevel != IAGameManager.IA_Lvl)
+        {
+            lastKnownLevel = IAGameManager.IA_Lvl;
+            patrolPoints = patrolRoute.GetPatrolPointsForLevel(lastKnownLevel);
+            Debug.Log("EnemyAI atualizou patrolPoints com novo nível: " + lastKnownLevel);
+
+            // Se estiver patrulhando, reinicia o estado com os novos pontos
+            if (stateMachine.CurrentState is StatePatrol)
+            {
+                stateMachine.ChangeState(new StatePatrol(stateMachine, this, patrolPoints));
+            }
+        }
     }
+
+
 
     public void SetPath(List<Node> path)
     {

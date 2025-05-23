@@ -10,12 +10,11 @@ public class StatePatrol : IState
     private Vector3 currentTarget;
     private float reachThreshold = 0.2f;
 
-    private bool isMoving = false;
-
     private bool waiting = false;
     private float waitTimer = 0f;
-    private float waitDuration = 3f; // tempo parado em segundos
+    private float waitDuration = 3f;
 
+    private int lastTargetIndex = -1; // índice do último ponto patrulhado, inicializado com -1
 
     public StatePatrol(StateMachine sm, EnemyAI enemyAI, List<Vector3> points)
     {
@@ -45,12 +44,10 @@ public class StatePatrol : IState
 
         if (enemy.currentPath == null || enemy.currentPath.Count == 0)
         {
-            // Espera antes de ir para o próximo ponto
             waiting = true;
             return;
         }
 
-        // Verifica perseguição
         if (enemy.seguindo)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -61,8 +58,6 @@ public class StatePatrol : IState
         }
     }
 
-
-
     public void Exit()
     {
         enemy.SetPath(null);
@@ -70,9 +65,25 @@ public class StatePatrol : IState
 
     private void PickNewTarget()
     {
-        int index = Random.Range(0, patrolPoints.Count);
-        currentTarget = patrolPoints[index];
-        Debug.Log("Novo destino de patrulha: " + currentTarget);
+        if (patrolPoints == null || patrolPoints.Count == 0)
+        {
+            Debug.LogWarning("PickNewTarget: Lista de pontos vazia ou nula.");
+            return;
+        }
+
+        int newIndex = lastTargetIndex;
+
+        // Enquanto o novo índice for igual ao anterior e houver mais de 1 ponto, tenta outro índice
+        while (newIndex == lastTargetIndex && patrolPoints.Count > 1)
+        {
+            newIndex = Random.Range(0, patrolPoints.Count);
+        }
+
+        lastTargetIndex = newIndex;
+        currentTarget = patrolPoints[newIndex];
+
+        Debug.Log($"Novo destino de patrulha: {currentTarget} (índice {newIndex})");
+
         List<Node> path = enemy.pathfinder.FindPath(enemy.transform.position, currentTarget);
         enemy.SetPath(path);
     }

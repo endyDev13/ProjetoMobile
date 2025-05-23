@@ -3,24 +3,40 @@ using UnityEngine;
 
 public class PatrolRoute : MonoBehaviour
 {
+    [System.Serializable]
+    public struct PatrolLevelRange
+    {
+        public int startIndex;
+        public int endIndex; // exclusivo, ou seja, não inclui esse índice
+    }
+
+
     [Tooltip("Pontos de patrulha divididos por nível")]
     public List<Transform> allPatrolPoints;
 
-    [Tooltip("Intervalos de pontos por nível")]
-    public List<int> levelRanges; 
+    [Tooltip("Faixas de pontos para cada nível da IA")]
+    public PatrolLevelRange[] patrolLevels;
+
 
     public List<Vector3> GetPatrolPointsForLevel(int level)
     {
         List<Vector3> selected = new List<Vector3>();
 
-        int start = levelRanges[level];
-        int end = (level + 1 < levelRanges.Count) ? levelRanges[level + 1] : allPatrolPoints.Count;
+        if (level < 0 || level >= patrolLevels.Length)
+        {
+            Debug.LogWarning("IA_Lvl fora do intervalo. Usando pontos do nível 0 como fallback.");
+            level = 0;
+        }
 
-        for (int i = start; i < end; i++)
+        int start = patrolLevels[level].startIndex;
+        int end = patrolLevels[level].endIndex;
+
+        for (int i = start; i < end && i < allPatrolPoints.Count; i++)
         {
             selected.Add(allPatrolPoints[i].position);
         }
 
         return selected;
     }
+
 }

@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class StateMachine
 {
-    private IState currentState;
+    public IState CurrentState { get; private set; }
+
     private MonoBehaviour owner;
 
     public StateMachine(MonoBehaviour owner)
@@ -12,16 +13,13 @@ public class StateMachine
 
     public void ChangeState(IState newState)
     {
-        if (currentState != null)
-            currentState.Exit();
-
-        currentState = newState;
-        currentState.Enter();
+        CurrentState?.Exit();
+        CurrentState = newState;
+        CurrentState.Enter();
     }
 
     public void Update()
     {
-        if (currentState != null)
-            currentState.Update();
+        CurrentState?.Update();
     }
 }
