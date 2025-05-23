@@ -9,7 +9,7 @@ public class PlayerSpawn : MonoBehaviour
     public CinemachineCamera virtualCamera; // arraste sua câmera aqui no Inspector
 
     public static string PlayerSkin = "";
-    private static bool hasSpawned = false;
+    public static bool hasSpawned = false;
 
     void Start()
     {
