@@ -10,6 +10,9 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Movimento")]
     public float moveSpeed = 3f;
+    private Animator animator;
+    private Vector3 lastMoveDirection;
+
 
     [Header("Controle de perseguição")]
     public bool seguindo = false;
@@ -50,6 +53,9 @@ public class EnemyAI : MonoBehaviour
         }
 
         stateMachine.ChangeState(new StatePatrol(stateMachine, this, patrolPoints));
+
+        animator = GetComponent<Animator>();
+
     }
 
     private void Update()
@@ -80,12 +86,16 @@ public class EnemyAI : MonoBehaviour
 
         transform.position += direction * moveSpeed * Time.deltaTime;
 
+        // Atualiza animação baseada na direção do movimento
+        UpdateAnimation(direction);
+
         if (Vector3.Distance(transform.position, currentTargetPosition) < 0.1f)
         {
             targetNodeIndex++;
             if (targetNodeIndex >= currentPath.Count)
             {
                 currentPath = null;
+                animator.Play("Idle"); // Para quando termina o caminho
             }
             else
             {
@@ -94,4 +104,29 @@ public class EnemyAI : MonoBehaviour
             }
         }
     }
+
+
+    private string currentAnimation = "";
+
+    private void UpdateAnimation(Vector3 direction)
+    {
+        string newAnimation = "";
+
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            newAnimation = direction.x > 0 ? "walkRight" : "walkLeft";
+        }
+        else
+        {
+            newAnimation = direction.y > 0 ? "walkUp" : "walkDown";
+        }
+
+        if (newAnimation != currentAnimation)
+        {
+            currentAnimation = newAnimation;
+            animator.Play(currentAnimation);
+        }
+    }
+
+
 }
