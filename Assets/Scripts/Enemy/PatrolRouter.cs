@@ -3,18 +3,24 @@ using UnityEngine;
 
 public class PatrolRoute : MonoBehaviour
 {
-    [Tooltip("Arraste aqui os pontos de patrulha (GameObjects vazios)")]
-    public List<Transform> patrolPoints = new List<Transform>();
+    [Tooltip("Pontos de patrulha divididos por nível")]
+    public List<Transform> allPatrolPoints;
 
-    public List<Vector3> GetWorldPositions()
+    [Tooltip("Intervalos de pontos por nível")]
+    public List<int> levelRanges; 
+
+    public List<Vector3> GetPatrolPointsForLevel(int level)
     {
-        List<Vector3> positions = new List<Vector3>();
-        foreach (var point in patrolPoints)
+        List<Vector3> selected = new List<Vector3>();
+
+        int start = levelRanges[level];
+        int end = (level + 1 < levelRanges.Count) ? levelRanges[level + 1] : allPatrolPoints.Count;
+
+        for (int i = start; i < end; i++)
         {
-            Vector3 pos = point.position;
-            pos.z = 0f; // Força plano 2D
-            positions.Add(pos);
+            selected.Add(allPatrolPoints[i].position);
         }
-        return positions;
+
+        return selected;
     }
 }

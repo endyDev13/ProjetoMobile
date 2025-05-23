@@ -36,27 +36,25 @@ public class EnemyAI : MonoBehaviour
     {
         stateMachine = new StateMachine(this);
 
-        patrolPoints = patrolRoute.GetWorldPositions(); 
-
-        // Verifica se o PatrolRoute está atribuído
         if (patrolRoute == null)
         {
-            Debug.LogError("EnemyAI: 'patrolRoute' não foi atribuído no Inspector.");
+            Debug.LogError("EnemyAI: patrolRoute NÃO foi atribuído.");
             return;
         }
 
-        
+        patrolPoints = patrolRoute.GetPatrolPointsForLevel(IAGameManager.IA_Lvl);
+
         if (patrolPoints == null || patrolPoints.Count == 0)
         {
-            Debug.LogError("EnemyAI: Nenhum ponto de patrulha encontrado no PatrolRoute.");
+            Debug.LogError("EnemyAI: Nenhum ponto de patrulha para IA_Lvl: " + IAGameManager.IA_Lvl);
             return;
         }
 
         stateMachine.ChangeState(new StatePatrol(stateMachine, this, patrolPoints));
 
         animator = GetComponent<Animator>();
-
     }
+
 
     private void Update()
     {
