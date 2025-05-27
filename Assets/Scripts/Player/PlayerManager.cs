@@ -30,7 +30,7 @@ public class PlayerManager : MonoBehaviour
 
     public string characterPrefix = "Boy"; // Prefixo para animações (Boy ou Girl)
 
-    private Animator animator; // Componente de animação
+    public Animator animator; // Componente de animação
 
     private void Start()
     {

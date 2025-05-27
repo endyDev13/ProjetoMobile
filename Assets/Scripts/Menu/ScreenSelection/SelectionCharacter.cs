@@ -19,6 +19,7 @@ public class ScreenCharacter : MonoBehaviour
     private float[] noiseOffsets;
 
     public static TMP_InputField inputField;      // Referência ao InputField
+    public static string namePlayer; // Nome do jogador
     public bool isTextLongEnough = false; // Bool que indica se o texto tem mais que 3 letras
 
     public Color selectedColor; // Cor do texto quando selecionado
@@ -92,7 +93,11 @@ public class ScreenCharacter : MonoBehaviour
 
     public void StartGame()
     {
-        if(isName && isSelection) SceneManager.LoadScene("GameplayScene");
+        if (isName && isSelection)
+        {
+            namePlayer = inputField.text; 
+            SceneManager.LoadScene("GameplayScene");
+        }
         else
         {
             Debug.Log("Select name and character");

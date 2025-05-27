@@ -193,12 +193,12 @@ TextureImporter:
       name: Teacher character Animation_0
       rect:
         serializedVersion: 2
-        x: 321
-        y: 0
-        width: 92
-        height: 264
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 355
+        y: 165
+        width: 61
+        height: 99
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,8 +219,8 @@ TextureImporter:
         y: 166
         width: 61
         height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -237,12 +237,12 @@ TextureImporter:
       name: Teacher character Animation_2
       rect:
         serializedVersion: 2
-        x: 508
+        x: 505
         y: 166
-        width: 53
+        width: 61
         height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -259,12 +259,12 @@ TextureImporter:
       name: Teacher character Animation_3
       rect:
         serializedVersion: 2
-        x: 566
+        x: 568
         y: 166
         width: 61
         height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: Teacher character Animation_4
       rect:
         serializedVersion: 2
-        x: 648
+        x: 644
         y: 166
-        width: 53
+        width: 61
         height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -303,7 +303,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b7609efd2461f2d49b8e8607481aba5c
     internalID: 0
     vertices: []
     indices: 
@@ -318,6 +318,7 @@ TextureImporter:
       Teacher character Animation_2: 2101159186949737108
       Teacher character Animation_3: -7361812003494900578
       Teacher character Animation_4: -299536427275676117
+      "cabe\xE7a": -824462816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
