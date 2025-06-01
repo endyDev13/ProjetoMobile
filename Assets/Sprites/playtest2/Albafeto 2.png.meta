@@ -412,7 +412,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Albafeto 2_0
+      name: A_Libras
       rect:
         serializedVersion: 2
         x: 217
@@ -420,7 +420,7 @@ TextureImporter:
         width: 315
         height: 331
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -434,7 +434,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_1
+      name: A
       rect:
         serializedVersion: 2
         x: 518
@@ -442,7 +442,7 @@ TextureImporter:
         width: 67
         height: 119
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -456,28 +456,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_2
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 2082
-        width: 73
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b98720c3fd44d1270800000000000000
-      internalID: 8222804220223584411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_3
       rect:
         serializedVersion: 2
@@ -486,7 +464,7 @@ TextureImporter:
         width: 290
         height: 420
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -508,7 +486,7 @@ TextureImporter:
         width: 46
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -522,28 +500,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_5
-      rect:
-        serializedVersion: 2
-        x: 1205
-        y: 2095
-        width: 45
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9fce5b0284cadd080800000000000000
-      internalID: -9160976641215304455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_6
       rect:
         serializedVersion: 2
@@ -552,7 +508,7 @@ TextureImporter:
         width: 365
         height: 306
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -574,7 +530,7 @@ TextureImporter:
         width: 64
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -588,28 +544,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_8
-      rect:
-        serializedVersion: 2
-        x: 1839
-        y: 2136
-        width: 26
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0bad032cba0ceda70800000000000000
-      internalID: 8853725761386896048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_9
       rect:
         serializedVersion: 2
@@ -618,7 +552,7 @@ TextureImporter:
         width: 270
         height: 366
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -640,7 +574,7 @@ TextureImporter:
         width: 43
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -654,28 +588,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_11
-      rect:
-        serializedVersion: 2
-        x: 2317
-        y: 2110
-        width: 43
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b95f4d8364dc46c0800000000000000
-      internalID: -4157714831932171855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_12
       rect:
         serializedVersion: 2
@@ -684,7 +596,7 @@ TextureImporter:
         width: 281
         height: 310
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -706,7 +618,7 @@ TextureImporter:
         width: 59
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -720,28 +632,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_14
-      rect:
-        serializedVersion: 2
-        x: 2914
-        y: 2122
-        width: 52
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9818eb8e62ebe6c10800000000000000
-      internalID: 2048783954822988169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_15
       rect:
         serializedVersion: 2
@@ -750,7 +640,7 @@ TextureImporter:
         width: 213
         height: 423
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -772,7 +662,7 @@ TextureImporter:
         width: 51
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -786,28 +676,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_17
-      rect:
-        serializedVersion: 2
-        x: 3399
-        y: 2120
-        width: 59
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aa9195732a4479d40800000000000000
-      internalID: 5591012925907737002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_18
       rect:
         serializedVersion: 2
@@ -816,7 +684,7 @@ TextureImporter:
         width: 281
         height: 399
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -838,7 +706,7 @@ TextureImporter:
         width: 211
         height: 393
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -860,7 +728,7 @@ TextureImporter:
         width: 113
         height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -882,7 +750,7 @@ TextureImporter:
         width: 231
         height: 323
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -904,7 +772,7 @@ TextureImporter:
         width: 399
         height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -926,7 +794,7 @@ TextureImporter:
         width: 264
         height: 397
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -948,7 +816,7 @@ TextureImporter:
         width: 373
         height: 370
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -970,7 +838,7 @@ TextureImporter:
         width: 68
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -984,28 +852,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_26
-      rect:
-        serializedVersion: 2
-        x: 590
-        y: 1575
-        width: 51
-        height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 15478266ed1516680800000000000000
-      internalID: -8763633384247757743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_27
       rect:
         serializedVersion: 2
@@ -1014,7 +860,7 @@ TextureImporter:
         width: 64
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1028,72 +874,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_28
-      rect:
-        serializedVersion: 2
-        x: 1145
-        y: 1562
-        width: 41
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7f950b9a1c32b9870800000000000000
-      internalID: 8690579220624071159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_29
-      rect:
-        serializedVersion: 2
-        x: 1634
-        y: 1553
-        width: 17
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b373e8c0aa0841120800000000000000
-      internalID: 2383671570629277499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_30
-      rect:
-        serializedVersion: 2
-        x: 1658
-        y: 1615
-        width: 16
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a1871b79979da49e0800000000000000
-      internalID: -1636256398336493542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_31
       rect:
         serializedVersion: 2
@@ -1102,7 +882,7 @@ TextureImporter:
         width: 75
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1124,7 +904,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1146,7 +926,7 @@ TextureImporter:
         width: 52
         height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1160,73 +940,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_34
-      rect:
-        serializedVersion: 2
-        x: 2855
-        y: 1553
-        width: 34
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b4b7bb07574a5f310800000000000000
-      internalID: 1438236480324205387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_35
-      rect:
-        serializedVersion: 2
-        x: 1666
-        y: 1557
-        width: 16
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 395982457efda71f0800000000000000
-      internalID: -1046277778767833709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_36
-      rect:
-        serializedVersion: 2
-        x: 2373
-        y: 1541
-        width: 42
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b01ce6dbc84401340800000000000000
-      internalID: 4832437771432804619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_37
+      name: M_Libras
       rect:
         serializedVersion: 2
         x: 194
@@ -1234,7 +948,7 @@ TextureImporter:
         width: 232
         height: 307
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1256,7 +970,7 @@ TextureImporter:
         width: 57
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1270,28 +984,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_39
-      rect:
-        serializedVersion: 2
-        x: 520
-        y: 1056
-        width: 100
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44a82ac0896cd1fe0800000000000000
-      internalID: -1216597967970858428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_40
       rect:
         serializedVersion: 2
@@ -1300,7 +992,7 @@ TextureImporter:
         width: 243
         height: 315
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1322,7 +1014,7 @@ TextureImporter:
         width: 49
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1336,28 +1028,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_42
-      rect:
-        serializedVersion: 2
-        x: 1119
-        y: 1079
-        width: 81
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ac58cf9408d7089f0800000000000000
-      internalID: -468236371295959606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_43
       rect:
         serializedVersion: 2
@@ -1366,7 +1036,7 @@ TextureImporter:
         width: 344
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1388,7 +1058,7 @@ TextureImporter:
         width: 60
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1410,7 +1080,7 @@ TextureImporter:
         width: 427
         height: 199
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1432,7 +1102,7 @@ TextureImporter:
         width: 48
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1446,7 +1116,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_47
+      name: Q_Libras
       rect:
         serializedVersion: 2
         x: 2564
@@ -1454,7 +1124,7 @@ TextureImporter:
         width: 250
         height: 370
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1468,7 +1138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_48
+      name: Q
       rect:
         serializedVersion: 2
         x: 2841
@@ -1476,7 +1146,7 @@ TextureImporter:
         width: 114
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1490,28 +1160,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_49
-      rect:
-        serializedVersion: 2
-        x: 2974
-        y: 1083
-        width: 48
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 626d81f5d46f1d320800000000000000
-      internalID: 2581114873628382758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_50
       rect:
         serializedVersion: 2
@@ -1520,7 +1168,7 @@ TextureImporter:
         width: 254
         height: 396
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1542,7 +1190,7 @@ TextureImporter:
         width: 59
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1556,73 +1204,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_52
-      rect:
-        serializedVersion: 2
-        x: 3447
-        y: 1084
-        width: 44
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ededc9cff0acc1760800000000000000
-      internalID: 7430035655265935070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_53
-      rect:
-        serializedVersion: 2
-        x: 1788
-        y: 1070
-        width: 31
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba7aa3724f740b6a0800000000000000
-      internalID: -6435564753556691029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_54
-      rect:
-        serializedVersion: 2
-        x: 2419
-        y: 1036
-        width: 32
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0e0e864042704e30800000000000000
-      internalID: 4485710849248202252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_55
+      name: S_Libras
       rect:
         serializedVersion: 2
         x: 216
@@ -1630,7 +1212,7 @@ TextureImporter:
         width: 300
         height: 310
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1644,7 +1226,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_56
+      name: S
       rect:
         serializedVersion: 2
         x: 500
@@ -1652,7 +1234,7 @@ TextureImporter:
         width: 59
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1666,28 +1248,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_57
-      rect:
-        serializedVersion: 2
-        x: 570
-        y: 499
-        width: 30
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48f1848577c8eba80800000000000000
-      internalID: -8449161406690353276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_58
       rect:
         serializedVersion: 2
@@ -1696,7 +1256,7 @@ TextureImporter:
         width: 209
         height: 423
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1718,7 +1278,7 @@ TextureImporter:
         width: 68
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1732,28 +1292,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_60
-      rect:
-        serializedVersion: 2
-        x: 1126
-        y: 508
-        width: 51
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd017e142a7881fc0800000000000000
-      internalID: -3523917577457299236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_61
       rect:
         serializedVersion: 2
@@ -1762,7 +1300,7 @@ TextureImporter:
         width: 282
         height: 392
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1784,7 +1322,7 @@ TextureImporter:
         width: 50
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1798,28 +1336,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_63
-      rect:
-        serializedVersion: 2
-        x: 1723
-        y: 523
-        width: 48
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 84a455ebc2ecd6990800000000000000
-      internalID: -7391024721877972408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_64
       rect:
         serializedVersion: 2
@@ -1828,7 +1344,7 @@ TextureImporter:
         width: 266
         height: 408
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1850,7 +1366,7 @@ TextureImporter:
         width: 81
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1864,28 +1380,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_66
-      rect:
-        serializedVersion: 2
-        x: 2310
-        y: 518
-        width: 40
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ae15267370893f40800000000000000
-      internalID: 5708735236060552864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_67
       rect:
         serializedVersion: 2
@@ -1894,7 +1388,7 @@ TextureImporter:
         width: 288
         height: 383
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1916,7 +1410,7 @@ TextureImporter:
         width: 93
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1930,28 +1424,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_69
-      rect:
-        serializedVersion: 2
-        x: 2915
-        y: 520
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 57c5560e4e6be4b50800000000000000
-      internalID: 6579397199768411253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_70
       rect:
         serializedVersion: 2
@@ -1960,7 +1432,7 @@ TextureImporter:
         width: 399
         height: 258
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1982,7 +1454,7 @@ TextureImporter:
         width: 86
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1996,182 +1468,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_72
-      rect:
-        serializedVersion: 2
-        x: 3359
-        y: 412
-        width: 56
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6c2db58ec9231b930800000000000000
-      internalID: 4157159580534297286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_73
-      rect:
-        serializedVersion: 2
-        x: 622
-        y: 369
-        width: 17
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 19f0c61a38e4a8410800000000000000
-      internalID: 1480081754800525201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_74
-      rect:
-        serializedVersion: 2
-        x: 651
-        y: 368
-        width: 27
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4ffb5238d9dfc3250800000000000000
-      internalID: 5925890062664712180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_75
-      rect:
-        serializedVersion: 2
-        x: 688
-        y: 369
-        width: 19
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5057256bb98b2e330800000000000000
-      internalID: 3738753619589231877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_76
-      rect:
-        serializedVersion: 2
-        x: 719
-        y: 363
-        width: 25
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d0264e82d68baf7d0800000000000000
-      internalID: -2883789832400379379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_77
-      rect:
-        serializedVersion: 2
-        x: 753
-        y: 356
-        width: 20
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 38ab674e0796c0de0800000000000000
-      internalID: -1365600653409863037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_78
-      rect:
-        serializedVersion: 2
-        x: 712
-        y: 327
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0ad1efdb247e8d90800000000000000
-      internalID: -7093604631273416177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_79
-      rect:
-        serializedVersion: 2
-        x: 726
-        y: 337
-        width: 27
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22a6eef8701964850800000000000000
-      internalID: 6360930985372969506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_80
       rect:
         serializedVersion: 2
@@ -2180,7 +1476,7 @@ TextureImporter:
         width: 489
         height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2194,160 +1490,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_81
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 291
-        width: 20
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0fb64271fcc60f6c0800000000000000
-      internalID: -4111666823086969872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_82
-      rect:
-        serializedVersion: 2
-        x: 662
-        y: 300
-        width: 47
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d2e307737a40a39f0800000000000000
-      internalID: -488072493380125139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_83
-      rect:
-        serializedVersion: 2
-        x: 601
-        y: 255
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2484ba2ec831005c0800000000000000
-      internalID: -4251376552418523070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_84
-      rect:
-        serializedVersion: 2
-        x: 619
-        y: 279
-        width: 18
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af824cf068f033fc0800000000000000
-      internalID: -3516449815581677318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_85
-      rect:
-        serializedVersion: 2
-        x: 695
-        y: 240
-        width: 48
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95edec7afb87327a0800000000000000
-      internalID: -6403141480641274279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_86
-      rect:
-        serializedVersion: 2
-        x: 637
-        y: 258
-        width: 26
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ea6f40dbebc2f9a10800000000000000
-      internalID: 1918301164009748142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_87
-      rect:
-        serializedVersion: 2
-        x: 669
-        y: 255
-        width: 25
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4df88071d7f5a1bd0800000000000000
-      internalID: -2658707639146868780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_88
       rect:
         serializedVersion: 2
@@ -2356,7 +1498,7 @@ TextureImporter:
         width: 363
         height: 215
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2370,28 +1512,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albafeto 2_89
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 58
-        width: 44
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d1356b6fe7d69dce0800000000000000
-      internalID: -1379951418739895523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Albafeto 2_90
       rect:
         serializedVersion: 2
@@ -2400,7 +1520,7 @@ TextureImporter:
         width: 105
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2413,33 +1533,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Albafeto 2_91
-      rect:
-        serializedVersion: 2
-        x: 1262
-        y: 86
-        width: 71
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4593bd28d08b13490800000000000000
-      internalID: -7768225514067904172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ca8bdc1f0b7f4f14da03c4fc912a7a41
     internalID: 0
     vertices: []
     indices: 
@@ -2449,8 +1547,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Albafeto 2_0: 1518620588551661893
-      Albafeto 2_1: 210162462248035118
+      A: 210162462248035118
+      A_Libras: 1518620588551661893
+      Albafeto 2_0: 383659148
       Albafeto 2_10: 1111759357935532877
       Albafeto 2_11: -4157714831932171855
       Albafeto 2_12: -2418833528075716955
@@ -2480,7 +1579,6 @@ TextureImporter:
       Albafeto 2_34: 1438236480324205387
       Albafeto 2_35: -1046277778767833709
       Albafeto 2_36: 4832437771432804619
-      Albafeto 2_37: 8119822388486608739
       Albafeto 2_38: -5625911236833529769
       Albafeto 2_39: -1216597967970858428
       Albafeto 2_4: -7065426602070197273
@@ -2491,8 +1589,6 @@ TextureImporter:
       Albafeto 2_44: 4052248549404061802
       Albafeto 2_45: -9165790265839707884
       Albafeto 2_46: -8039015149156862866
-      Albafeto 2_47: -2193804671130860042
-      Albafeto 2_48: -6372631153544957988
       Albafeto 2_49: 2581114873628382758
       Albafeto 2_5: -9160976641215304455
       Albafeto 2_50: -783981440350997466
@@ -2500,8 +1596,6 @@ TextureImporter:
       Albafeto 2_52: 7430035655265935070
       Albafeto 2_53: -6435564753556691029
       Albafeto 2_54: 4485710849248202252
-      Albafeto 2_55: -1838413923054845174
-      Albafeto 2_56: -5381027644380217727
       Albafeto 2_57: -8449161406690353276
       Albafeto 2_58: 2303360265601036889
       Albafeto 2_59: -1916290583394242692
@@ -2541,6 +1635,11 @@ TextureImporter:
       Albafeto 2_9: -3283503499937078584
       Albafeto 2_90: 4238516794359878689
       Albafeto 2_91: -7768225514067904172
+      M_Libras: 8119822388486608739
+      Q: -6372631153544957988
+      Q_Libras: -2193804671130860042
+      S: -5381027644380217727
+      S_Libras: -1838413923054845174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

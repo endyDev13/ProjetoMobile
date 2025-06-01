@@ -1,5 +1,6 @@
 using UnityEngine;
 using Terresquall;
+using UnityEngine.SceneManagement;
 
 // Gerencia o jogador, movimentação, interações e animações
 public class PlayerManager : MonoBehaviour
@@ -30,7 +31,7 @@ public class PlayerManager : MonoBehaviour
 
     public string characterPrefix = "Boy"; // Prefixo para animações (Boy ou Girl)
 
-    public Animator animator; // Componente de animação
+    public  Animator animator; // Componente de animação
 
     private void Start()
     {
@@ -102,14 +103,9 @@ public class PlayerManager : MonoBehaviour
         }
 
 
-        if (other.CompareTag("end"))
+        if (other.CompareTag("nextPhase"))
         {
-            if (screenSettingsZerado != null)
-                screenSettingsZerado.SetActive(true);
-            else
-                Debug.LogError("screenSettingsZerado está nulo!");
-
-            isMove = false;
+          SceneManager.LoadScene("IAScene"); // Carrega próxima fase
         }
     }
 
