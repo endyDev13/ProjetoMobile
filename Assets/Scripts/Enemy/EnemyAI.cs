@@ -7,9 +7,10 @@ public class EnemyAI : MonoBehaviour
     [Header("Referências")]
     public Pathfinder pathfinder;
     public PatrolRoute patrolRoute;
+    public GameObject player;
 
     [Header("Movimento")]
-    public float moveSpeed = 3f;
+    
     private Animator animator;
     private Vector3 lastMoveDirection;
 
@@ -28,6 +29,9 @@ public class EnemyAI : MonoBehaviour
     private Vector3 currentTargetPosition;
 
 
+    public GameObject DeadScreen;
+    public Color colorSeguindo;
+
     public List<Vector3> GetPatrolPoints()
     {
         return patrolPoints;
@@ -35,6 +39,7 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
         stateMachine = new StateMachine(this);
+        player = GameObject.FindGameObjectWithTag("Player");
 
         if (patrolRoute == null)
         {
@@ -56,11 +61,18 @@ public class EnemyAI : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-
     private int lastKnownLevel = -1; // Adicione esta linha fora de qualquer método
 
     private void Update()
     {
+        if (player != null)
+        {
+            float distance = Vector3.Distance(transform.position, player.transform.position);
+            Debug.DrawLine(transform.position, player.transform.position, distance < IAGameManager.distanceChaseIA ? Color.green : Color.gray);
+        }
+
+        if (seguindo) GetComponent<SpriteRenderer>().color = colorSeguindo;
+        else GetComponent<SpriteRenderer>().color = Color.white;
         stateMachine.Update();
         MoveAlongPath();
 
@@ -100,7 +112,7 @@ public class EnemyAI : MonoBehaviour
         Vector3 pos = transform.position;
         Vector3 direction = (currentTargetPosition - pos).normalized;
 
-        transform.position += direction * moveSpeed * Time.deltaTime;
+        transform.position += direction *IAGameManager.moveSpeedIA * Time.deltaTime;
 
         // Atualiza animação baseada na direção do movimento
         UpdateAnimation(direction);
@@ -144,5 +156,13 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+          DeadScreen.SetActive(true); // Ativa a tela de morte
+          Destroy(collision.gameObject); // Destroi o jogador ao colidir com o inimigo
+          Destroy(gameObject); // Destroi o inimigo ao colidir com o jogador
+        }
+    }
 }

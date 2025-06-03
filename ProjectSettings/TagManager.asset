@@ -9,6 +9,12 @@ TagManager:
   - puzzleBooks
   - tapete
   - nextPhase
+  - door
+  - KeyM
+  - KeyS
+  - KeyA
+  - KeyQ
+  - safe
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9109519116626365424}
   - component: {fileID: 1217329169079375354}
   - component: {fileID: 6584685865161620223}
+  - component: {fileID: -765683936919291273}
   m_Layer: 0
   m_Name: PlayerGirl
   m_TagString: Player
@@ -184,6 +185,7 @@ MonoBehaviour:
   paper: {fileID: 0}
   countSpawnBook: 0
   characterPrefix: Girl
+  animator: {fileID: 0}
 --- !u!95 &6584685865161620223
 Animator:
   serializedVersion: 7
@@ -206,3 +208,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-765683936919291273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507276286994627032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8ec0868c2bf90409d88eafac2fdf97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

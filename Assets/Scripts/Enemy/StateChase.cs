@@ -20,6 +20,7 @@ public class StateChase : IState
 
     public void Enter()
     {
+        enemy.seguindo = true; // Ativa o bool seguindo
         RequestPathToPlayer();
         Debug.Log("Iniciando perseguição ao jogador: ");
     }
@@ -35,7 +36,7 @@ public class StateChase : IState
         }
 
         // Se perdeu o jogador ou bool seguindo desligou, volta pra patrulha
-        if (Vector3.Distance(enemy.transform.position, player.position) > 8f || !enemy.seguindo)
+        if (Vector3.Distance(enemy.transform.position, player.position) > IAGameManager.distanceIA || !enemy.seguindo)
         {
             Debug.Log("Jogador perdido ou bool desligada, voltando pra patrulha.");
             stateMachine.ChangeState(new StatePatrol(stateMachine, enemy, enemy.GetPatrolPoints()));
@@ -48,6 +49,7 @@ public class StateChase : IState
 
     public void Exit()
     {
+        enemy.seguindo = false; // Desativa o bool seguindo
         enemy.SetPath(null);
     }
 

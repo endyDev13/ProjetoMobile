@@ -6,6 +6,7 @@ public class StatePatrol : IState
     private StateMachine stateMachine;
     private EnemyAI enemy;
     private List<Vector3> patrolPoints;
+    private GameObject player;
 
     private Vector3 currentTarget;
     private float reachThreshold = 0.2f;
@@ -25,6 +26,8 @@ public class StatePatrol : IState
 
     public void Enter()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        enemy.seguindo = false; // Desativa o bool seguindo
         PickNewTarget();
     }
 
@@ -48,15 +51,12 @@ public class StatePatrol : IState
             return;
         }
 
-        if (enemy.seguindo)
+        if (player != null && Vector3.Distance(enemy.transform.position, player.transform.position) <=IAGameManager.distanceChaseIA)
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null && Vector3.Distance(enemy.transform.position, player.transform.position) < 5f)
-            {
-                stateMachine.ChangeState(new StateChase(stateMachine, enemy, player.transform));
-            }
+            stateMachine.ChangeState(new StateChase(stateMachine, enemy, player.transform));
         }
     }
+
 
     public void Exit()
     {
