@@ -156,13 +156,24 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-          DeadScreen.SetActive(true); // Ativa a tela de morte
-          Destroy(collision.gameObject); // Destroi o jogador ao colidir com o inimigo
-          Destroy(gameObject); // Destroi o inimigo ao colidir com o jogador
+            PlayerManager playerManager = collision.GetComponent<PlayerManager>();
+
+            if (playerManager != null && playerManager.IsHidden())
+            {
+                // Jogador está escondido, ignore
+                return;
+            }
+
+            // Jogador não está escondido, pode matar
+            DeadScreen.SetActive(true);
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
+
 }

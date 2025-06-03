@@ -37,14 +37,19 @@ public class DoorInteraction : MonoBehaviour
 
                 if (managerDoor.keyCode == "m")
                 {
+                    managerDoor.keyCode = "";
                     IAGameManager.SetNivel(1);
                 }
                 else if (managerDoor.keyCode == "s")
                 {
+                    managerDoor.keyCode = "";
                     IAGameManager.ZeroSpecial();
                 }
                 else if (managerDoor.keyCode == "a")
+                {
+                    managerDoor.keyCode = "";
                     IAGameManager.SetNivel(3);
+                }
 
             }
             else

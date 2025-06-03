@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogSystem : MonoBehaviour
+public class DialogSystem1 : MonoBehaviour
 {
 
     [Header("Conteúdo do Diálogo")]
@@ -20,6 +20,8 @@ public class DialogSystem : MonoBehaviour
     [Header("Configurações")]
     public float typingSpeed = 0.05f;
     public float waitAfterTyping = 1.5f;
+    public Button skipButton; // Botão para pular o diálogo
+
 
     private int currentLineIndex = 0;
     private bool isTyping = false;
@@ -32,23 +34,27 @@ public class DialogSystem : MonoBehaviour
 
     void Start()
     {
-        dialogStarted = false; // Inicializa o estado do diálogo como não iniciado
+        
         animator = GetComponent<Animator>(); // Obtém o componente Animator do diálogo
         animator.Play("idle"); // Inicia a animação idle do diálogo
         playerManager = FindAnyObjectByType<PlayerManager>(); // Obtém referência ao PlayerManager
         nextButton.onClick.AddListener(OnNextClicked);
+        skipButton.onClick.AddListener(SkipDialog);
+        skipButton.gameObject.SetActive(false);
+
         nextButton.gameObject.SetActive(false);
         illustrationImage.gameObject.SetActive(false);
         dialogText.text = "";
 
         SetButtonColor(Color.red);
-        dialogTexts[1] = "Que bom que você chegou <b><color=#00FF00> " + ScreenCharacter.namePlayer + "</color></b>! Mas… a sala está uma bagunça…";
+        dialogTexts[0] = "Caramba,<b><color=#00FF00> " + ScreenCharacter.namePlayer + "</color></b>!!! A gente caiu no porão.";
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!dialogStarted && other.CompareTag("Player"))
         {
+            Debug.Log("dialogo onn");
             dialogPanel.SetActive(true); // Ativa o painel de diálogo
             dialogStarted = true;
             PlayerManager.isMove = false; // Desativa movimento do jogador
@@ -61,12 +67,19 @@ public class DialogSystem : MonoBehaviour
     {
         currentLineIndex = 0;
         nextButton.gameObject.SetActive(true);
+        skipButton.gameObject.SetActive(true); //  ativa aqui
         illustrationImage.gameObject.SetActive(true);
-
-        
-
         StartCoroutine(DisplayLine());
     }
+
+    void SkipDialog()
+    {
+        StopAllCoroutines(); // Para a digitação
+
+        EndDialog(); // Finaliza o diálogo imediatamente
+    }
+
+
 
     IEnumerator DisplayLine()
     {
@@ -93,24 +106,6 @@ public class DialogSystem : MonoBehaviour
                 break;
             case 6:
                 illustrationImage.sprite = dialogImages[4];
-                break;
-            case 7:
-                illustrationImage.sprite = dialogImages[5];
-                break;
-            case 8:
-                illustrationImage.sprite = dialogImages[6];
-                break;
-            case 9:
-                illustrationImage.sprite = dialogImages[7];
-                break;
-            case 10:
-                illustrationImage.sprite = dialogImages[8];
-                break;
-            case 11:
-                illustrationImage.sprite = dialogImages[2];
-                break;
-                case 12:
-                illustrationImage.color = new Color(1, 1, 1, 0);
                 break;
         }
         dialogText.text = "";

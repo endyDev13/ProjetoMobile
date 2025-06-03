@@ -51,11 +51,17 @@ public class StatePatrol : IState
             return;
         }
 
-        if (player != null && Vector3.Distance(enemy.transform.position, player.transform.position) <=IAGameManager.distanceChaseIA)
+        //  AQUI: só persegue se o jogador não estiver escondido
+        if (player != null && !player.GetComponent<PlayerManager>().IsHidden())
         {
-            stateMachine.ChangeState(new StateChase(stateMachine, enemy, player.transform));
+            if (Vector3.Distance(enemy.transform.position, player.transform.position) <= IAGameManager.distanceChaseIA)
+            {
+                stateMachine.ChangeState(new StateChase(stateMachine, enemy, player.transform));
+                return;
+            }
         }
     }
+
 
 
     public void Exit()

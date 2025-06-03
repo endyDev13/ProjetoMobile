@@ -35,16 +35,17 @@ public class StateChase : IState
             RequestPathToPlayer();
         }
 
-        // Se perdeu o jogador ou bool seguindo desligou, volta pra patrulha
-        if (Vector3.Distance(enemy.transform.position, player.position) > IAGameManager.distanceIA || !enemy.seguindo)
+        PlayerManager pm = player.GetComponent<PlayerManager>();
+
+        // Se jogador estiver escondido ou longe ou "seguindo" desligado
+        if (pm != null && (pm.IsHidden() || Vector3.Distance(enemy.transform.position, player.position) > IAGameManager.distanceIA || !enemy.seguindo))
         {
-            Debug.Log("Jogador perdido ou bool desligada, voltando pra patrulha.");
+            Debug.Log("Jogador perdido, escondido ou bool desligada, voltando pra patrulha.");
             stateMachine.ChangeState(new StatePatrol(stateMachine, enemy, enemy.GetPatrolPoints()));
-
-
             return;
         }
     }
+
 
 
     public void Exit()

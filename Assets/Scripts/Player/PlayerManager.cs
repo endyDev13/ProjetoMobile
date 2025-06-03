@@ -32,6 +32,7 @@ public class PlayerManager : MonoBehaviour
     public string characterPrefix = "Boy"; // Prefixo para animações (Boy ou Girl)
 
     public  Animator animator; // Componente de animação
+      private bool escondido = false;
 
     private void Start()
     {
@@ -83,6 +84,8 @@ public class PlayerManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         playerTrigger.TriggerEnter2D(other);
+
+        
 
         if (other.CompareTag("paper"))
         {
@@ -222,4 +225,35 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public void Hide()
+    {
+        escondido = true;
+
+        PlayerStop();
+        GetComponent<SpriteRenderer>().enabled = false;
+        GameObject.FindAnyObjectByType<EnemyAI>().seguindo = false; // faz a IA esquecer
+        Debug.Log("Escondido");
+    }
+
+    public void Unhide()
+    {
+        escondido = false;
+
+        PlayerUnStop();
+        GetComponent<SpriteRenderer>().enabled = true;
+        Debug.Log("Saiu do esconderijo");
+    }
+
+    public void ToggleHide()
+    {
+        if (escondido)
+            Unhide();
+        else
+            Hide();
+    }
+
+    public bool IsHidden()
+    {
+        return escondido;
+    }
 }
