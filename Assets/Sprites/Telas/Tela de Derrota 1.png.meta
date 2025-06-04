@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tela de Derrota 1_0: -776904547842544489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

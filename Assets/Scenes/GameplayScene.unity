@@ -214,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 204293273}
+        m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+        m_MethodName: ShowRewarded
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8859262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,6 +1811,63 @@ MonoBehaviour:
   bookYellow: {fileID: 369965570}
   cabinets: {fileID: 1455342511}
   screenSettingsZerado: {fileID: 1016585090}
+--- !u!1 &204293271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 204293272}
+  - component: {fileID: 204293273}
+  m_Layer: 0
+  m_Name: adsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &204293272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204293271}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1487232568}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &204293273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204293271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec8ca41165b04d4388861ea8b63150d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ANDROID_GAME_ID: 5869132
+  ANDROID_INTERSTITIAL_ID: Interstitial_Android
+  ANDROID_REWARDED_ID: Rewarded_Android
+  ANDROID_BANNER_ID: Banner_Android
+  iOS_GAME_ID: 5869133
+  iOS_INTERSTITIAL_ID: Interstitial_iOS
+  iOS_REWARDED_ID: Rewarded_iOS
+  iOS_BANNER_ID: Banner_iOS
+  interstitialLoaded: 0
+  rewardedLoaded: 0
+  bannerLoaded: 0
+  backfill: {fileID: 0}
+  closeButton: {fileID: 0}
 --- !u!1 &211255722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2357,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1135248993}
         m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
         m_MethodName: LibrasScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 204293273}
+        m_TargetAssemblyTypeName: AdsManager, Assembly-CSharp
+        m_MethodName: ShowInterstitial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -39478,6 +39559,7 @@ Transform:
   - {fileID: 822859698}
   - {fileID: 178240356}
   - {fileID: 1135248992}
+  - {fileID: 204293272}
   m_Father: {fileID: 1751132134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554324616
