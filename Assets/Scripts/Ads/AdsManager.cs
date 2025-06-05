@@ -187,7 +187,7 @@ public class AdsManager : MonoBehaviour,
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
         Debug.Log($"OnUnityAdsShowComplete {placementId}:{showCompletionState}");
-        if (placementId == INTERSTITIAL_ID) interstitialLoaded = false;
+        if (placementId == INTERSTITIAL_ID) interstitialLoaded = false; /// fazer o load ads aqui e carregar ela de novo
         if (placementId == REWARDED_ID) rewardedLoaded = false;
 
         Advertisement.Load(placementId, this);
