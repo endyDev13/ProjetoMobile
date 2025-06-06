@@ -93,31 +93,21 @@ public class AdsManager : MonoBehaviour,
         BANNER_ID = iOS_BANNER_ID;
 #endif
     }
-    void Start()
+void Start()
+{
+    DontDestroyOnLoad(this);
+    if (!Advertisement.isInitialized && Advertisement.isSupported)
     {
-        DontDestroyOnLoad(this);
-        if (!Advertisement.isInitialized && Advertisement.isSupported)
-        {
-            Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
-            Advertisement.Initialize(GAME_ID, Debug.isDebugBuild, this);
-        }
+        Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
+        Advertisement.Initialize(GAME_ID, false, this); // falso = modo produção real
+    }
+}
 
-        StartCoroutine(AutoReloadAds());
-    }
-    private IEnumerator AutoReloadAds()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(0.5f); // verifica a cada 0.5 segundos
-            LoadInterstitial();
-            LoadRewarded();
-        }
-    }
     public void OnInitializationComplete()
     {
         //assim que completa o start dos Ads vamos carregar um
         //pra deixar prontinho pra ser mostrado
-        Debug.Log("OnInitializationComplete");
+        Debug.Log("Unity Ads Initialized");
         interstitialLoaded = false;
         rewardedLoaded = false;
         bannerLoaded = false;
@@ -187,15 +177,15 @@ public class AdsManager : MonoBehaviour,
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
         Debug.Log($"OnUnityAdsShowComplete {placementId}:{showCompletionState}");
-        if (placementId == INTERSTITIAL_ID) interstitialLoaded = false; /// fazer o load ads aqui e carregar ela de novo
+
+        if (placementId == INTERSTITIAL_ID) interstitialLoaded = false;
         if (placementId == REWARDED_ID) rewardedLoaded = false;
 
-        Advertisement.Load(placementId, this);
+        Advertisement.Load(placementId, this); // carrega só o que foi exibido
 
         if (placementId == REWARDED_ID &&
             showCompletionState == UnityAdsShowCompletionState.COMPLETED &&
-            OnRewardedCompleted != null
-            )
+            OnRewardedCompleted != null)
         {
             OnRewardedCompleted();
         }
